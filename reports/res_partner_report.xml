@@ -1,25 +1,18 @@
+<?xml version="1.0"?>
 <odoo>
-    <template id="report_res_partner_document">
+    <template id="report_res_partner_document"> <!-- Cambia a 'report_res_partner_document' -->
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="partner">
-                <div class="page">
-                    <h2 t-esc="partner.name"/>
-                    <p><strong>NIT:</strong> <span t-esc="partner.vat or 'N/A'"/></p>
-                    <p><strong>Teléfono:</strong> <span t-esc="partner.phone or 'N/A'"/></p>
-                    <p><strong>Dirección:</strong> <span t-esc="partner.contact_address"/></p>
-                    <p><strong>Email:</strong> <span t-esc="partner.email or 'N/A'"/></p>
-                </div>
+            <t t-foreach="docs" t-as="doc">
+                <t t-foreach="doc" t-as="contact">
+                    <div>
+                        <h2><t t-esc="contact.name"/></h2>
+                        <p>NIT: <t t-esc="contact.vat"/></p>
+                        <p>Teléfono: <t t-esc="contact.phone"/></p>
+                        <p>Dirección: <t t-esc="contact.street"/></p>
+                        <p>Correo: <t t-esc="contact.email"/></p>
+                    </div>
+                </t>
             </t>
         </t>
     </template>
-
-    <report
-        id="action_report_res_partner_document"
-        model="res.partner"
-        string="Contact Report"
-        report_type="qweb-pdf"
-        name="test_dev_denteco.report_res_partner_document"
-        file="test_dev_denteco.report_res_partner_document"
-        print_report_name="'Contacts - %s' % (object.name)"
-    />
 </odoo>

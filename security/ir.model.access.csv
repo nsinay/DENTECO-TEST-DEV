@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_test_dev_denteco_test_dev_denteco,test_dev_denteco.test_dev_denteco,model_test_dev_denteco_test_dev_denteco,base.group_user,1,1,1,1
-res_partner.access_res_partner,access_res_partner,test_dev_denteco.model_res_partner,base.group_user,1,1,1,1
+access_res_partner_custom,res.partner.custom,model_res_partner,base.group_user,1,1,1,1
