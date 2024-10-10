@@ -1,40 +1,40 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Gestión de Proyectos MECA",
+    'name': "test_dev_denteco",
 
     'summary': """
-        Desarrollo personalizado Para Meca Empresarial, S.A.""",
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Desarrollo personalizado Para Meca Empresarial, S.A.
+        Long description of module's purpose
     """,
 
-    'author': "Jorge Marroquin",
-    'website': "http://www.meca.com.gt",
-    'license': 'LGPL-3',
+    'author': "My Company",
+    'website': "https://www.yourcompany.com",
 
-    'category': 'Localization',
-    'version': '16.0',
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
+    # for the full list
+    'category': 'Uncategorized',
+    'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'account', 'hr','contacts'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
-        'data/data.xml',
+        #'security/ir.model.access.csv',
+        'views/views.xml',
+        'views/templates.xml',
+        'views/res_partner_views.xml',
+
+        'views/report_action.xml',
+        'reports/res_partner_report.xml',
         
-
-        'security/ir.model.access.csv',
-        'views/hr_liquidation_views.xml',
-        'views/infraestructure_inventory_views.xml',
-
-        'reports/report_action.xml',
-        'reports/hr_liquidation_report.xml',
-        'reports/report_infraestructure_inventory.xml',
-
     ],
     # only loaded in demonstration mode
     'demo': [
-        
+        'demo/demo.xml',
     ],
 }
