@@ -7,3 +7,5 @@ class ResPartner(models.Model):
 
     custom_external = fields.Boolean(string="Custom External", default=False)
     studio_field = fields.Char(string="Campo Odoo Studio")
+
+#ODOO PRUEGA DE GITHUB
